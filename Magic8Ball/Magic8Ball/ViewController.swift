@@ -19,16 +19,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        randomBallNumber = Int.random(in: 0 ... 4)
-        
         updateBall()
     }
 
     @IBAction func askButtonPressed() {
-        
+        updateBall()
     }
     
     func updateBall() {
+        randomBallNumber = Int.random(in: 0 ... 4)
         imageView.image = UIImage(named: ballArray[randomBallNumber])
     }
 }
